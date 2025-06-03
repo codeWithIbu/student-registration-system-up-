@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="A simple student registration system to manage student details.">
+    <meta name="keywords" content="student registration, student management, web application">
+    <meta name="author" content="Your Name">
+    <title>Student Registration System</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <script src="script.js"></script>
+</body>
+<header>
+        <h1>Student Registration System</h1>
+        <p>Effortlessly manage student details including name, ID, email, and contact number. Add, edit, and delete student records with ease.</p>
+        <a href="https://github.com/your-username" target="_blank" rel="noopener noreferrer">
+  <img src="https://github.githubassets.com/images/modules/logos_page/GitHub-Mark.png" 
+       alt="GitHub" 
+       width="32" 
+       height="32">
+</a>
+    </header>
+    <main>
+        <section id="registration-form">
+            <h2>Register New Student</h2>
+            <form id="studentForm">
+                <div class="form-group">
+                    <label for="studentName">Student Name:</label>
+                    <input type="text" id="studentName" placeholder="Enter student's full name" required>
+                </div>
+                <div class="form-group">
+                    <label for="studentID">Student ID:</label>
+                    <input type="text" id="studentID" placeholder="e.g., 12345" pattern="[0-9]+" title="Student ID must be numeric" required>
+                </div>
+                <div class="form-group">
+                    <label for="emailID">Email ID:</label>
+                    <input type="email" id="emailID" placeholder="e.g., example@domain.com" required>
+                </div>
+                <div class="form-group">
+                    <label for="contactNo">Contact No.:</label>
+                    <input type="text" id="contactNo" placeholder="e.g., +91xxxxxxxxxx" pattern="[0-9]+" title="Contact number must be numeric" required>
+                </div>
+                <button type="submit" id="addStudentBtn">Add Student</button>
+            </form>
+        </section>
+        <section id="student-records">
+            <h2>Registered Students</h2>
+            <div class="table-container">
+                <table id="studentTable">
+                    <thead>
+                        <tr>
+                            <th>Student Name</th>
+                            <th>Student ID</th>
+                            <th>Email ID</th>
+                            <th>Contact No.</th>
+                            <th>Actions</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        </tbody>
+                </table>
+            </div>
+            <p id="noRecordsMessage" style="display: none;">No student records found. Add a new student above!</p>
+        </section>
+    </main>
+</html>

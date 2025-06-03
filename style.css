@@ -1,0 +1,231 @@
+/* style.css */
+body {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    margin: 0;
+    padding: 20px;
+    background-color: #f4f7f6;
+    color: #333;
+    line-height: 1.6;
+}
+
+header {
+    background-color: #28a745; /* Green header */
+    color: white;
+    padding: 25px 0;
+    text-align: center;
+    border-radius: 8px;
+    margin-bottom: 30px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+}
+
+header h1 {
+    margin: 0;
+    font-size: 2.8em;
+    letter-spacing: 1.5px;
+}
+
+header p {
+    font-size: 1.1em;
+    opacity: 0.9;
+    margin-top: 10px;
+}
+
+main {
+    max-width: 1000px;
+    margin: 0 auto;
+    padding: 20px;
+    background-color: #ffffff;
+    border-radius: 8px;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.08);
+}
+
+section {
+    margin-bottom: 40px;
+    padding: 25px;
+    border: 1px solid #e0e0e0;
+    border-radius: 8px;
+    background-color: #fcfcfc;
+}
+
+section h2 {
+    color: #0056b3; /* Darker blue for section titles */
+    text-align: center;
+    margin-bottom: 25px;
+    font-size: 2em;
+    border-bottom: 2px solid #0056b3;
+    padding-bottom: 10px;
+    display: inline-block;
+    width: 100%;
+}
+
+/* Form Styling */
+.form-group {
+    margin-bottom: 18px;
+}
+
+.form-group label {
+    display: block;
+    margin-bottom: 8px;
+    font-weight: bold;
+    color: #555;
+}
+
+.form-group input[type="text"],
+.form-group input[type="email"] {
+    width: calc(100% - 22px);
+    padding: 12px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    font-size: 1em;
+    box-sizing: border-box; /* Include padding and border in the element's total width and height */
+}
+
+.form-group input[type="text"]:focus,
+.form-group input[type="email"]:focus {
+    border-color: #007bff;
+    box-shadow: 0 0 5px rgba(0, 123, 255, 0.3);
+    outline: none;
+}
+
+button[type="submit"] {
+    display: block;
+    width: 100%;
+    padding: 15px;
+    background-color: #007bff; /* Blue for add button */
+    color: white;
+    border: none;
+    border-radius: 5px;
+    font-size: 1.1em;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+    margin-top: 25px;
+}
+
+button[type="submit"]:hover {
+    background-color: #0056b3;
+}
+
+/* Table Styling */
+.table-container {
+    max-height: 400px; /* Max height for scrollbar */
+    overflow-y: auto; /* Vertical scrollbar */
+    border: 1px solid #e0e0e0;
+    border-radius: 8px;
+    margin-top: 20px;
+}
+
+table {
+    width: 100%;
+    border-collapse: collapse;
+    margin-top: 0;
+    background-color: #fff;
+    min-width: 600px; /* Ensure table doesn't get too narrow */
+}
+
+table th, table td {
+    padding: 15px;
+    text-align: left;
+    border-bottom: 1px solid #ddd;
+}
+
+table th {
+    background-color: #f2f2f2;
+    font-weight: bold;
+    color: #555;
+    position: sticky; /* Make headers sticky for scrolling */
+    top: 0;
+    z-index: 10;
+}
+
+table tbody tr:hover {
+    background-color: #f9f9f9;
+}
+
+table td .action-buttons button {
+    padding: 8px 12px;
+    margin-right: 8px;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+    font-size: 0.9em;
+    transition: background-color 0.2s ease;
+}
+
+table td .action-buttons .edit-btn {
+    background-color: #ffc107; /* Yellow for edit */
+    color: white;
+}
+
+table td .action-buttons .edit-btn:hover {
+    background-color: #e0a800;
+}
+
+table td .action-buttons .delete-btn {
+    background-color: #dc3545; /* Red for delete */
+    color: white;
+}
+
+table td .action-buttons .delete-btn:hover {
+    background-color: #c82333;
+}
+
+#noRecordsMessage {
+    text-align: center;
+    margin-top: 20px;
+    color: #888;
+    font-style: italic;
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+    header h1 {
+        font-size: 2.2em;
+    }
+
+    main {
+        padding: 15px;
+    }
+
+    section {
+        padding: 15px;
+    }
+
+    .form-group input[type="text"],
+    .form-group input[type="email"] {
+        width: calc(100% - 20px);
+    }
+
+    table th, table td {
+        padding: 10px;
+        font-size: 0.9em;
+    }
+
+    table td .action-buttons button {
+        padding: 6px 10px;
+        margin-right: 5px;
+    }
+}
+
+@media (max-width: 480px) {
+    header h1 {
+        font-size: 1.8em;
+    }
+
+    header p {
+        font-size: 0.9em;
+    }
+
+    button[type="submit"] {
+        padding: 12px;
+        font-size: 1em;
+    }
+
+    table th, table td {
+        font-size: 0.8em;
+        /* Force table to scroll horizontally on small screens */
+        white-space: nowrap;
+    }
+    .table-container {
+        overflow-x: auto;
+    }
+}
